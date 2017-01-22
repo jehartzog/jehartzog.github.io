@@ -1,0 +1,223 @@
+// all animations are in _includes/animations.scss to allow conditional import via YAML
+@keyframes fadeIn
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+
+@keyframes fadeInUp
+    0%
+        opacity: 0
+        transform: translate3d(0, 100%, 0)
+    100%
+        opacity: 1
+        transform: none
+
+@keyframes fadeInDown
+    0%
+        opacity: 0
+        transform: translate3d(0, -100%, 0)
+    100%
+        opacity: 1
+        transform: none
+
+@keyframes descriptionFirst
+    0%
+        transform: translate3d(35%, 0, 0)
+    100%
+        transform: none
+
+@keyframes descriptionSecond
+    0%
+        opacity: 0
+        transform: translate3d(-35%, 0, 0) scaleX(0)
+    100%
+        opacity: 1
+        transform: none
+
+@keyframes grow
+    0%
+        transform: scale3d(1, 1, 1)
+    100%
+        transform: scale3d(1.2, 1.2, 1)
+
+@keyframes shrink
+    0%
+        transform: scale3d(1.2, 1.2, 1)
+    100%
+        transform: scale3d(1, 1, 1)
+
+@keyframes expandHorz
+    0%
+        transform: scale3d(0, 1, 1)
+    100%
+        transform: scale3d(1, 1, 1)
+
+@keyframes slideDown
+    0%
+        transform: translate3d(0, -50px, 0)
+    100%
+        transform: none
+
+.home,
+.intro,
+.blog,
+.about
+    .header-home
+        animation-name: fadeInDown
+        animation-fill-mode: both
+
+    .nav,
+    .footer-main
+        animation-fill-mode: both
+        animation-name: fadeIn
+
+    .social-links
+        animation-fill-mode: both
+        animation-name: expandHorz
+
+.home,
+.intro
+    .list
+        > .item
+            > .image,
+            > .detail
+                animation-name: fadeInUp
+                animation-fill-mode: both
+
+    .image
+        img
+            animation-name: shrink
+            animation-duration: 0.3s
+            animation-fill-mode: both
+    .image:hover,
+    .image:focus
+        img
+            animation-name: grow
+    .image:active
+        img
+            animation-name: shrink
+            animation-duration: 0.1s
+
+.intro
+    .header-home
+        animation-duration: 1s
+        .description
+            > .firsthalf,
+            > .secondhalf
+                animation-duration: 1.5s
+                animation-fill-mode: both
+                animation-delay: 1s
+
+            @media #{$above}
+                .firsthalf
+                    animation-name: descriptionFirst
+
+                .secondhalf
+                    animation-name: descriptionSecond
+
+            @media #{$below}
+                .secondhalf
+                    animation-name: fadeIn
+
+        .social-links
+            animation-duration: 1s
+            animation-delay: 5s
+
+    .list
+        animation-fill-mode: both
+        animation-name: slideDown
+        animation-delay: 5s
+        animation-duration: 1s
+
+        > .item
+            > .image,
+            > .detail
+                animation-duration: 1s
+
+        > .-num-0
+            > .image,
+            > .detail
+                animation-delay: 2s
+
+        > .-num-1
+            > .image,
+            > .detail
+                animation-delay: 3s
+
+        > .-num-2
+            > .image,
+            > .detail
+                animation-delay: 4s
+
+    .nav,
+    .footer-main
+        animation-delay: 5s
+        animation-duration: 1s
+
+.home
+    .list
+        > .item
+            > .image,
+            > .detail
+                animation-duration: 0.75s
+
+        > .-num-0
+            > .image,
+            > .detail
+                animation-delay: 0.2s
+
+        > .-num-1
+            > .image,
+            > .detail
+                animation-delay: 0.4s
+
+        > .-num-2
+            > .image,
+            > .detail
+                animation-delay: 0.6s
+
+.home,
+.blog,
+.about
+    .header-home
+        animation-duration: 0.75s
+
+    .nav,
+    .footer-main
+        animation-duration: 0.75s
+
+    .social-links
+        animation-duration: 0.75s
+        animation-delay: 0.5s
+        
+.post,
+.about
+    .header-post,
+    .header-about
+        animation-name: fadeInDown
+        animation-fill-mode: both
+        animation-duration: 0.75s
+        
+    .nav,
+    .footer-post,
+    .post-content,
+    .about-content
+        animation-name: fadeIn
+        animation-fill-mode: both
+        animation-duration: 0.75s
+        
+.blog
+    .pagination
+        animation-duration: 0.75s
+        animation-name: fadeInUp
+        animation-fill-mode: both
+
+    .animated-post
+        animation-name: fadeInUp
+        animation-duration: 0.75s
+        animation-fill-mode: both
+
+    @for $num from 0 through 9
+        .animated-post.-num-#{$num}
+            animation-delay: (($num + 1) * 0.2) * 1s

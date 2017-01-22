@@ -3,21 +3,27 @@
 # https://jekyllrb.com/docs/pagination/
 layout: page
 title: Blog
+# can't set a permalink with pagination
 ---
 <section class="list">
+	{% assign blogPostIndex = 0 %}
 	{% if site.posts.size == 0 %}
 		<p class="text-center">Nothing published yet!</p>
 	{% elsif site.paginate %}
 		{% for post in paginator.posts %}
-	        {% include blog-post.html %}
-	    {% endfor %}
+			{% if post.category == 'blog' %}
+				{% include blog-post.html %}
+				{% assign blogPostIndex = blogPostIndex | plus: 1 %}
+			{% endif %}
+		{% endfor %}
 
-		{% if site.paginate %}
-			{% include pagination.html%}
-		{% endif %}
+		{% include pagination.html%}
 	{% else %}
 		{% for post in site.posts %}
-			{% include blog-post.html %}
+			{% if post.category == 'blog' %}
+				{% include blog-post.html %}
+				{% assign blogPostIndex = blogPostIndex | plus: 1 %}
+			{% endif %}
 		{% endfor %}
 	{% endif %}
 </section>

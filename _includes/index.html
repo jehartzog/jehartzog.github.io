@@ -1,0 +1,17 @@
+<div class="list">
+    {% assign indexPostIndex = 0 %}
+    {% for post in site.posts reversed %}
+        {% if post.category == 'projects' %}
+            <div class="item -num-{{ indexPostIndex }}">
+                <div class="image">
+                    <a href="{{ site.url }}{{ post.url }}"><img src="{{ site.url }}{{ post.image }}" alt="{{ post.title }} Icon"></a>
+                </div>
+                <div class="detail">
+                    <h2>{{ post.title }}</h2>
+                    <p>{{ post.description }}. {{ post.extra-description }}</p>
+                </div>
+            </div>
+            {% assign indexPostIndex = indexPostIndex | plus: 1 %}
+        {% endif %}
+    {% endfor %}
+</div>

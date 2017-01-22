@@ -1,0 +1,21 @@
+.intro,
+.home
+    > .list
+        display: table
+        .item
+            display: table-row
+
+        .image
+            display: table-cell
+            overflow: visible
+            padding: 25px 25px 0 0
+            width: 80px
+            // need the follow tag to ensure IE11 doesn't oversize the images held in the div
+            img
+                width: 80px
+
+        .detail
+            display: table-cell
+            vertical-align: top
+            .subtitle
+                font-size: 1.3rem

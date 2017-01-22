@@ -1,46 +1,49 @@
 ---
 title: About
 layout: page
+description: "A man and his dog"
 ---
-![Profile Image]({{ site.url }}/{{ site.picture }})
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<header class="header-about">
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<img class="about-profile" src="{{ site.url }}{{ site.picture }}" alt="Profile Picture">
+
+<p class="description text-center">{{ page.description }}</p>
+
+</header>
+
+<section class="about-content">
+
+<h2>Under the Ocean</h2>
+
+<p>After graduating from Duke University with a M.S. in Computer Science and minors in Mandarin Chinese and Economics, I went on to release my blockbuster <a href="/projects/stickwars">StickWars</a> iOS game and to learn how to <a href="/blog/submarine-officer">drive a submarine</a>. After completing my training and being assigned to a submarine, my development career was put on hold as I drove around underneath the Atlantic ocean.</p>
+
+<h2>Back on Dry Land</h2>
+
+<p>I finished my tour at sea and came back to a development environment that had changed significantly over the years. I needed to catch up with the times, but I was still employeed full time in a job so I used my after-hours time to gain experience with the modern toolsets. I started with <a href="/projects/tutoringzone">TutoringZone.com</a>, later building <a href="/projects/thecottage">The Cottage</a>, and continued on multiple smaller projects.</p>
 
 <h2>Skills</h2>
 
 <ul class="skill-list">
-	<li>HTML - Jade - Haml - Erb</li>
-	<li>Responsive (Mobile First)</li>
-	<li>CSS (Stylus, Sass, Less)</li>
-	<li>Css Frameworks (Bootstrap, Foundation)</li>
-	<li>Javascript (Design Patterns, Testes)</li>
-	<li>NodeJS</li>
-	<li>AngularJS - ReactJS</li>
-	<li>Grunt - Gulp - Yeoman</li>
-	<li>Git</li>
-	<li>PHP</li>
-	<li>Python</li>
-	<li>MySQL - MongoDB</li>
-	<li>Scrum and Kanban</li>
-	<li>TDD e Continuous Integration</li>
+	<li>Full Stack JS (MeteorJS, MongoDB, NodeJS)</li>
+	<li><a href="/tags#aws">AWS</a> (EC2, RDS, Auto Scaling)</li>
+	<li>Front-End JS Frameworks (React, Angular)</li>
+	<li>CSS Frameworks (<a href="/tags#bootstrap">Bootstrap</a>), <a href="/tags#sass">SASS</a>/<a href="/tags#less">LESS</a>/<a href="/tags#stylus">Stylus</a></li>
+    <li><a href="/tags#lamp">LAMP</a> Apps (<a href="/tags#moodle">Moodle</a>, <a href="/tags#opencart">OpenCart</a>)</li>
+	<li><a href="/tags#responsive">Responsive</a> Site Design</li>
+	<li>Server Provisioning & Configuration (<a href="/tags#ansible">Ansible</a>)</li>
+	<li><a href="/tags#git">Git</a></li>
 </ul>
 
-<h2>Projects</h2>
-
+<h4>Interests</h4>
 <ul>
-	<li><a href="https://github.com/">Lorem Lorem</a></li>
-	<li><a href="https://github.com/">Ipsum Dolor</a></li>
-	<li><a href="https://github.com/">Dolor Lorem</a></li>
+	<li>Ultimate Frisbee</li>
+	<li>Team Fortress 2</li>
 </ul>
+
+<h4>Site credits</h4>
+<ul>
+	<li>Theme - A fork of <a href="https://github.com/sergiokopplin/indigo">indigo</a> with modifications by Eric Hartzog</li>
+	<li>Tools - Jeyll, GitHub Pages, SASS</li>
+</ul>
+</section>

@@ -7,6 +7,7 @@
 
     > .link > .selfie
         width: 125px
+        height: 125px
         margin-bottom: 25px
         border-radius: 100%
         transition: all .2s
@@ -27,7 +28,15 @@
         font-style: normal
         color: $gama
         width: 70%
-        margin: 0 auto 30px
+        margin: 0 auto
+
+        > .firsthalf,
+        > .secondhalf
+            display: inline-block
+        > .firsthalf p
+            margin-bottom: 0
+        > .secondhalf p
+            margin-top: 0
 
         // if you put some links in your bio. ;)
         a
