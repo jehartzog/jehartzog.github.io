@@ -1,9 +1,0 @@
-# for local testing
-url: http://localhost:3000
-
- # fixes a bug when serving on dev instance when using extensionless urls
-permalink: /:categories/:title/
-
-# not needed since CSS is inline included anyways
-# sass:
-#   style: expanded

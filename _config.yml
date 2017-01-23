@@ -96,7 +96,7 @@ gems:
 jekyll-mentions:
     base_url: https://github.com
 
-exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, tasks, package.json, _site, vendor, CNAME, Rakefile, travis.sh]
+exclude: [README.md, Gemfile, Gemfile.lock, _site, CNAME, Rakefile, travis.sh]
 
 # perform builds using incremental flag, still experimental so disabled
 # incremental: true
