@@ -16,7 +16,7 @@ description: "A man and his dog"
 
 <h2>Under the Ocean</h2>
 
-<p>After graduating from Duke University with a M.S. in Computer Science and minors in Mandarin Chinese and Economics, I went on to release my blockbuster <a href="/projects/stickwars">StickWars</a> iOS game and to learn how to <a href="/blog/submarine-officer">drive a submarine</a>. After completing my training and being assigned to a submarine, my development career was put on hold as I drove around underneath the Atlantic ocean.</p>
+<p>After graduating from Duke University with a B.S. in Computer Science and minors in Mandarin Chinese and Economics, I went on to release my blockbuster <a href="/projects/stickwars">StickWars</a> iOS game and to learn how to <a href="/blog/submarine-officer">drive a submarine</a>. After completing my training and being assigned to a submarine, my development career was put on hold as I drove around underneath the Atlantic ocean.</p>
 
 <h2>Back on Dry Land</h2>
 
