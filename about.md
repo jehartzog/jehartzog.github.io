@@ -38,6 +38,7 @@ description: "A man and his dog"
 <h4>Interests</h4>
 <ul>
 	<li>Ultimate Frisbee</li>
+	<li>Overwatch</li>
 	<li>Team Fortress 2</li>
 </ul>
 
