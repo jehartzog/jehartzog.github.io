@@ -1,0 +1,26 @@
+---
+title: "Skoolers"
+layout: post
+date: 2015-01-07 17:00
+tag:
+- Projects
+- PHP
+- Moodle
+- MySQL
+- Website
+- LAMP
+- Responsive
+- Bootstrap
+- LESS
+- AWS
+- EC2
+- Git
+image: /images/skoolers-logo-200x200.png
+category: projects
+hidden: true # don't show this in pagination
+description: "Skoolers Tutoring helps thousands of UF and FSU students boost their college grades with their Moodle based video tutoring platform"
+extra-description: "I provide <a href=\"/projects/skoolers\">Skoolers</a> front and back end support."
+---
+## About Skoolers
+
+With thousands of enrollees, [Skoolers](http://www.skoolerstutoring.com) is one of the largest online teaching organization serving University of Florida and Florida State University students.

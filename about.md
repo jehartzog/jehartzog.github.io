@@ -20,7 +20,7 @@ description: "A man and his dog"
 
 <h2>Back on Dry Land</h2>
 
-<p>I finished my tour at sea and came back to a development environment that had changed significantly over the years. I needed to catch up with the times, but I was still employeed full time in a job so I used my after-hours time to gain experience with the modern toolsets. I started with <a href="/projects/tutoringzone">TutoringZone.com</a>, later building <a href="/projects/thecottage">The Cottage</a>, and continued on multiple smaller projects.</p>
+<p>I finished my tour at sea and came back to a development environment that had changed significantly over the years. I needed to catch up with the times, but I was still employeed full time in a job so I used my after-hours time to gain experience with the modern toolsets. I started with <a href="/projects/skoolers">SkoolersTutoring.com</a>, later building <a href="/projects/thecottage">The Cottage</a>, and continued on multiple smaller projects.</p>
 
 <h2>Skills</h2>
 
