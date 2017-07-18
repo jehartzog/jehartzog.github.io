@@ -25,7 +25,7 @@ description: "A man and his dog"
 <h2>Skills</h2>
 
 <ul class="skill-list">
-	<li>Full Stack JavaScript (React, Meteor, MongoDB, Node)
+	<li>Full Stack JavaScript (React, Meteor, MongoDB, Node)</li>
 	<li><a href="/tags#aws">AWS</a> (EC2, RDS, Auto Scaling)</li>
 	<li>CSS Frameworks (<a href="/tags#bootstrap">Bootstrap</a>), <a href="/tags#sass">SASS</a>/<a href="/tags#less">LESS</a>/<a href="/tags#stylus">Stylus</a></li>
     <li><a href="/tags#lamp">LAMP</a> Apps (<a href="/tags#moodle">Moodle</a>, <a href="/tags#opencart">OpenCart</a>)</li>
