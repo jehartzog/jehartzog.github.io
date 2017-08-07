@@ -16,8 +16,7 @@ tag:
 - EC2
 - Git
 image: /images/thecottage-logo.png
-category: projects
-hidden: true # don't show this in pagination
+category: blog
 description: "An online marketplace to buy and sell handcrafted foods"
 extra-description: "I was hired to build the online marketplace platform for <a href=\"/projects/thecottage\">The Cottage</a>."
 ---

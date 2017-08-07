@@ -1,7 +1,7 @@
 ---
 title: "Skoolers"
 layout: post
-date: 2015-01-07 17:00
+date: 2016-06-13 17:00
 tag:
 - Projects
 - PHP
@@ -15,12 +15,30 @@ tag:
 - AWS
 - EC2
 - Git
+- NodeJS
+- React
+- Meteor
+- MongoDB
 image: /images/skoolers-logo-200x200.png
 category: projects
 hidden: true # don't show this in pagination
-description: "Skoolers Tutoring helps thousands of UF and FSU students boost their college grades with their Moodle based video tutoring platform"
-extra-description: "I provide <a href=\"/projects/skoolers\">Skoolers</a> front and back end support."
+description: "Skoolers Tutoring helps thousands of UF and FSU students boost their college grades with their React & Node.JS based video tutoring platform"
+extra-description: "I built and support the <a href=\"/projects/skoolers\">Skoolers</a> online platform."
 ---
 ## About Skoolers
 
 With thousands of enrollees, [Skoolers](http://www.skoolerstutoring.com) is one of the largest online teaching organization serving University of Florida and Florida State University students.
+
+## The Task
+
+With a library of over 10,000 videos and students hungry to devour over 10 TB worth of video bandwidth a month, Skoolers needed a solution to deliever those videos in a streamlined, cost-efficient way.
+
+## The Quick Solution
+
+Skoolers was limping along with an open-source [Moodle](https://moodle.org/) (PHP) based website that was pieced together just enough to function.
+
+## The Good Solution
+
+After putting together the plan, I was able to produce a replacement solution based on [Meteor](https://www.meteor.com/), running on Node.JS servers with a [MongoDB](https://www.mongodb.com/) database and [React](https://facebook.github.io/react/) powering the front-end.
+
+More fun tech stuff will come about how this was solved, but first, must finish tweaking the site for the client...
