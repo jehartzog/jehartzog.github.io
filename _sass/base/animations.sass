@@ -102,24 +102,7 @@
 .intro
     .header-home
         animation-duration: 1s
-        .description
-            > .firsthalf,
-            > .secondhalf
-                animation-duration: 1.5s
-                animation-fill-mode: both
-                animation-delay: 1s
-
-            @media #{$above}
-                .firsthalf
-                    animation-name: descriptionFirst
-
-                .secondhalf
-                    animation-name: descriptionSecond
-
-            @media #{$below}
-                .secondhalf
-                    animation-name: fadeIn
-
+        
         .social-links
             animation-duration: 1s
             animation-delay: 5s
@@ -145,14 +128,9 @@
             > .detail
                 animation-delay: 3s
 
-        > .-num-2
-            > .image,
-            > .detail
-                animation-delay: 4s
-
     .nav,
     .footer-main
-        animation-delay: 5s
+        animation-delay: 4s
         animation-duration: 1s
 
 .home
@@ -171,11 +149,6 @@
             > .image,
             > .detail
                 animation-delay: 0.4s
-
-        > .-num-2
-            > .image,
-            > .detail
-                animation-delay: 0.6s
 
 .home,
 .blog,

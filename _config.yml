@@ -10,7 +10,7 @@ resume-url: https://google.com/?q=my+resume
 # main text of home
 name: Eric Hartzog
 # header bio written directly into header.html to allow for extra tags for animation
-bio: Transitioning Submarine Officer -> Full Stack Developer
+bio: Full Stack Developer
 
 # profile picture
 picture: /images/profile.jpg
