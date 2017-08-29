@@ -10,7 +10,7 @@ resume-url: https://google.com/?q=my+resume
 # main text of home
 name: Eric Hartzog
 # header bio written directly into header.html to allow for extra tags for animation
-bio: Full Stack Developer
+bio: Nomad Indie Dev
 
 # profile picture
 picture: /images/profile.jpg
@@ -60,7 +60,7 @@ post-advance-links: [blog]
 width: large
 
 # if you don't need pagination, comment the *paginate* configs below
-paginate: 5
+paginate: 6
 paginate_path: blog/:num
 
 # if you don't need "about" or "blog", comment them out below
@@ -84,7 +84,7 @@ sass:
   style: compressed
 
 # versions of these can be found at https://pages.github.com/versions
-gems:
+plugins:
   - jemoji
   - jekyll-mentions
   - jekyll-seo-tag
@@ -100,7 +100,7 @@ jekyll-mentions:
 exclude: [README.md, Gemfile, Gemfile.lock, _site, CNAME, Rakefile, travis.sh]
 
 # perform builds using incremental flag, still experimental so disabled
-# incremental: true
+incremental: true
 
 # third party tools that need to be manually updated
 # normalize.css - _sass/base/_normalize.scss
