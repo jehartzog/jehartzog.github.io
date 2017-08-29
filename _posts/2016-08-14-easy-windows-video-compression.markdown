@@ -20,7 +20,7 @@ While I was satisfied with the process for syncing and storing pictures, video w
 For a long time I was too lazy to do anything about it, until I realized that iPhone video was taking up 40GB, roughly 30% of all my Dropbox files, unnecessarily filling up my expensive SSD's on every computer my wife and I shared. It was time to sit down and fix this.
 
 ### Help me Google!
-A quick google search turned out a bunch of partial solutions which didn't exactly do what I wasn't looking for, or just didn't work at all, so I put together a quick windows script which would work. I'm sure this would be easier on macOS, but my MacBook Pro died and I'm holding off purchasing a new one while Apple takes [4 years to update their MacBook Pro line](http://www.bloomberg.com/news/articles/2016-08-10/apple-said-to-plan-first-pro-laptop-overhaul-in-four-years).
+A quick google search turned out a bunch of partial solutions which didn't exactly do what I wasn't looking for, or just didn't work at all, so I put together a quick windows script which would work. I'm sure this would be easier on macOS, but my MacBook Pro died and I'm holding off purchasing a new one while Apple takes 4 years to update their MacBook Pro line.
 
 ## Using HandBrake to Batch Convert Videos in a Folder Recursively with Windows Script
 
