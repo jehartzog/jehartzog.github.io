@@ -18,7 +18,7 @@ Because of this, the only updates to the game for the past 5+ years have been ma
 
 ## Apple the good cop
 
-Up until this point, Apple has been amazingly supportive of legacy applications, obviously putting considering effort into not breaking old applications. While I don't directly see the work they are doing, I know they are doing it, because they keep updating iOS but StickWars continues to run just fine, year after year, with minimal intervention on my part.
+Up until this point, Apple has been amazingly supportive of legacy apps, obviously putting considerable effort into not breaking old apps. While I don't directly see the work they are doing, I know they are doing it, because they keep updating iOS but StickWars continues to run just fine, year after year, with minimal intervention on my part.
 
 My last version 1.8.9 was released Sept 19th, 2013, so we're talking about some serious backward-compatibility work on Apple's part. That appears to have it's limits though...
 
@@ -103,7 +103,7 @@ typedef struct CGPoint32Bit CGPoint32Bit;
 #define ccVertex2F CGPoint32Bit 
 ```
 
-Along with a minor fix to `/cocos2d/PointParticleSystem.m`, and that was it! A updated the AdMob library in the lite version and prepared the update.
+Along with a minor fix to `/cocos2d/PointParticleSystem.m`, and that was it! I updated the AdMob library in the lite version and prepared the update.
 
 ## Total time to fix
 
@@ -119,7 +119,7 @@ So when wondering to yourself 'why don't the devs for those 200,000 apps just up
 
 * A Mac running OS X. It's a very expensive time to be an Apple developer who wants to run on modern hardware. The current generation of mid-range Macbooks are not great for development, and try not to gag at the cost of the lowest-end [15" Macbook Pro](https://www.apple.com/shop/buy-mac/macbook-pro/15-inch).
 
-* A dev on hand to pick up the project. I wrote StickWars from scratch, so even though it was ages ago I still have an idea how I structured everything overall and could be productive quickly. When picking up a project written by a different dev, this can be a good or bad time based on how easily you can understand what they did.
+* A dev on hand to pick up the project. I wrote StickWars from scratch, so even though it was ages ago I still have an idea how I structured everything overall and could be productive quickly. When picking up a project written by a different dev, this can be a pleasant or painful experience based on how easily you can understand what they did years ago.
 
 * An incentive to keep the app alive. StickWars is still in the top 150 of paid arcade/action games in the US. It's not a fire hose of sales, but enough that it's definitely worth the effort to keep alive. Plus with 8% of the iPhone apps leaving the store with iOS 11, there may be a bump from less competition?
 
