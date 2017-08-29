@@ -36,7 +36,7 @@ Instead of dealing with nested callbacks or arrays of promises, what if I could 
 
 Although I mentioned [ES7 async/await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await), I actually used Meteor's [wrapAsync](https://docs.meteor.com/api/core.html#Meteor-wrapAsync) to actually wrap the API in a sync framework. They both would work for the purpose, but I had already used wrapAsync at other points in the project and was familiar enough with it.
 
-Below is the wrapper function around the API to both transform the calls into sync calls and manage the rate limiting.
+Below is the wrapper function around the API to both transform the calls into sync calls and manage the rate limiting. I talk more about the rate limiting calls used below in [this post](/blog/writing-the-book-on-vimeo-api-rate-limiting).
 
 ```js
 import VimeoAPI from 'vimeo';

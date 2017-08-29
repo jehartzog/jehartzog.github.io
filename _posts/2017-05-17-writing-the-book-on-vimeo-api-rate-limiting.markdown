@@ -25,8 +25,11 @@ In the course of my testing, I accidentally dropped `x-ratelimiting-remaining` t
 ## Vimeo API Ratelimit Overview
 
 * The Vimeo API tracks the total number of calls you have made in a constantly rolling 15 minute window. 
+
 * The `x-ratelimit-reset` response is useless, it always just returns a timestamp exactly 15 minutes ahead of your call.
+
 * The `x-ratelimit-remaining` is a number to carefully watch, this is what you should use to track how many calls you are making and when to not allow any further calls.
+
 * The `x-ratelimit-limit` is the important number you want to look at when setting up your application to make sure you are at a constant max value.
 
 ## Vimeo API's mysterious 15 minute rolling window
@@ -34,8 +37,12 @@ In the course of my testing, I accidentally dropped `x-ratelimiting-remaining` t
 A few details on how this window works based on my observations. All of this is from estimations, not actually knowing how their servers work internally.
 
 * They not perform any sort of averaging of calls per second or minute like most other API's.
+
 * They store each request you make along with a timestamp. They then add up the number of requests, subtract that from `x-ratelimit-limit`, and that is your `x-ratelimit-remaining`.
+
 * Every second or minute, they go through and delete any calls that are older than 15 minutes and recalculate the `x-ratelimit-remaining`.
+
+* They say to not 'scrape' by making a bunch of calls at the same time, but I saw no evidence that following this actually made a difference. I wrote a throttler to space out repeated API calls by various increments (0ms, 5ms, 500ms, etc...) with no change to `x-ratelimit-limit`. The only enforcement mechanisms I saw were the calls allowed per 15 minute sliding window and the JSON filter fields setting that limit.
 
 These rules have some odd effects to the end user, such that if you do a ton of operations at once and use up all your available calls, you need to wait exactly 15 minutes before making any additional calls, at which point they will all be suddenly restored.
 
