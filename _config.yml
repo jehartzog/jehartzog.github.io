@@ -100,7 +100,7 @@ jekyll-mentions:
 exclude: [README.md, Gemfile, Gemfile.lock, _site, CNAME, Rakefile, travis.sh]
 
 # perform builds using incremental flag, still experimental so disabled
-incremental: true
+# incremental: true
 
 # third party tools that need to be manually updated
 # normalize.css - _sass/base/_normalize.scss
