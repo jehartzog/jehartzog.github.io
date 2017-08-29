@@ -48,6 +48,7 @@ const VimeoLib = {};
 // Store some constants specific to the Vimeo API
 VimeoLib.constants = {
   MAX_RESULTS_PER_PAGE: 100, // Per Vimeo documentation
+  VIDEO_FIELD_FILTER: 'uri,name,duration,created_time,modified_time,status', // The video fields we care about
   ...
 };
 
