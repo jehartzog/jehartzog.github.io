@@ -17,7 +17,7 @@ Development of StickWars started during spring break of 2009 while I stayed with
 
 The Apple App Store had been released just a few months ago and although new apps were constantly being released they were often poorly written and lacked useful functionality. The best game I found at the time was [Notecard Defense](http://hijinksinc.com/2009/03/13/sneak-peek-notecard-defense/), but there was still a lot of progress to be made.
 
-I was in my senior year completing my Computer Science degree at the time and thought I could make a better game, so I set out to do it. I learned photoshop and painstakingly hand drew all the stick figures and gradiant art, and purchased a small set of sound effects to add. It was no small feat to allow the game run smoothly with over 25 animated figures on the screen on the iPhone 3G's 412 MHz processor and 128 MB of RAM, but luckily I had some outstanding libraries to assist me.
+I was in my senior year completing my Computer Science degree at the time and thought I could make a better game, so I set out to do it. I learned photoshop and painstakingly hand drew all the stick figures and gradient art, and purchased a small set of sound effects to add. It was no small feat to allow the game run smoothly with over 25 animated figures on the screen on the iPhone 3G's 412 MHz processor and 128 MB of RAM, but luckily I had some outstanding libraries to assist me.
 
 ## Open Source to the Rescue
 
