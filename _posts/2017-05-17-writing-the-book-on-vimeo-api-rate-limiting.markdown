@@ -48,7 +48,7 @@ These rules have some odd effects to the end user, such that if you do a ton of 
 
 ## The magic of `x-ratelimit-limit`
 
-If you browse the Vimeo API forums you'll see [post after post](https://vimeo.com/search/forums/page:20?forum_name=6&q=rate+limit) of devs asking about why they are seeing very low rate limits as responses.
+If you browse the Vimeo API forums you'll see [post after post](https://vimeo.com/forums/api/topic:285701) of devs asking about why they are seeing very low rate limits as responses.
 
 ### Membership plan sets max limit
 
