@@ -5,6 +5,7 @@ date: 2017-05-16 17:00
 tag:
 - API
 - Vimeo
+- Skoolers
 category: blog
 image: /images/video-icon.png
 description: "The ES7 ladder to escape from callback hell"

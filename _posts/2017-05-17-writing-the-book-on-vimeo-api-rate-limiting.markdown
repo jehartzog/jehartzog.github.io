@@ -5,6 +5,7 @@ date: 2017-05-17 17:00
 tag:
 - API
 - Vimeo
+- Skoolers
 category: blog
 image: /images/video-icon.png
 description: "When the simple seems impossible, keep nagging until it works"

@@ -4,9 +4,9 @@ layout: post
 date: 2017-03-01 17:00
 tag:
 - Meteor
-- Skoolers
 - Winston
 - Logging
+- Skoolers
 category: blog
 image: /images/meteor-logo.png
 description: "Using Meteor seamlessly log and alert in Slack from both client & server"

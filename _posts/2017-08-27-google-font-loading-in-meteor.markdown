@@ -4,6 +4,8 @@ layout: post
 date: 2017-08-27 17:00
 tag:
 - Meteor
+- Skoolers
+- Google Fonts
 category: blog
 image: /images/meteor-logo.png
 description: "A great mystery that shouldn't be"
