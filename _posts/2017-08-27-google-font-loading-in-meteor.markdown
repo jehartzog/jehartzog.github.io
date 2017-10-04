@@ -24,7 +24,7 @@ The best post I found was [this](https://forums.meteor.com/t/adding-google-fonts
 
 After reading through [google's tips](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization#webfonts_and_the_critical_rendering_path), I settled on the solution below for a few reasons:
 
-* The webfontloader JS is included in the main package, no need to wait for a second round trip before the browser even begins to download fonts. The webfontloader package is a very small addition to your main bundle, well worth the extra speed in getting the font downloaded.
+* The compact webfontloader JS is included in the main package, no need to wait for a second round trip before the browser even begins to download fonts. The webfontloader package is a very small addition to your main bundle, well worth the extra speed in getting the font downloaded.
 
 * No render blocking at all, thanks to webfontloader replacing any `@import` css rules.
 
@@ -51,11 +51,10 @@ WebFont.load({
 
 ```
 
-This SCSS is optional, it prevents the FOUT. I don't write a lot of CSS code, so keep that in mind :).
+This SCSS is optional, it prevents the FOUT by hiding the text, but falls back to showing it if the google font fails to load. I don't write a lot of CSS code, so keep that in mind :).
 
 `/client/styles.scss`
 ```scss
-/* Prevent FOUT */ 
 h1,h2,h3,h4,h5,h6,p,a { 
     visibility: hidden; 
 } 
@@ -67,4 +66,6 @@ h1,h2,h3,h4,h5,h6,p,a {
 } 
 ```
 
-After looking at the screenshots on a fresh render, this gives me exactly what I was looking for, quick page
+After looking at the screenshots on a fresh render, this gives me exactly what I was looking for, quick page load that shows a layout that matches the end result, with the actual text hidden until the font is loaded within a second.
+
+While something this common probably should be laid out in official documentation somewhere, it was still worth the effort as the end result ended up shaving almost a second off the initial load time where the website displays nothing but a white page while it waits for render blocking resources.
