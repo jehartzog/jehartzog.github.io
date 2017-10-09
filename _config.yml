@@ -10,7 +10,7 @@ resume-url: https://google.com/?q=my+resume
 # main text of home
 name: Eric Hartzog
 # header bio written directly into header.html to allow for extra tags for animation
-bio: Nomad Indie Dev
+bio: Freelance Dev
 
 # profile picture
 picture: /images/profile.jpg
