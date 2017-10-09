@@ -4,16 +4,9 @@ layout: post
 date: 2016-06-13 17:00
 tag:
 - Projects
-- PHP
-- Moodle
-- MySQL
-- Website
-- LAMP
 - Responsive
 - Bootstrap
-- LESS
-- AWS
-- EC2
+- SASS
 - Git
 - NodeJS
 - React
@@ -22,23 +15,23 @@ tag:
 image: /images/skoolers-logo-200x200.png
 category: projects
 hidden: true # don't show this in pagination
-description: "Skoolers Tutoring helps thousands of UF and FSU students boost their college grades with their React & Node.JS based video tutoring platform"
+description: "Skoolers Tutoring helps thousands of UF and FSU students dominate their courses with focused online video reviews, study materials, and practice questions."
 extra-description: "I built and support the <a href=\"/projects/skoolers\">Skoolers</a> online platform."
 ---
-## About Skoolers
+# About Skoolers
 
-With thousands of enrollees, [Skoolers](http://www.skoolerstutoring.com) is one of the largest online teaching organization serving University of Florida and Florida State University students.
+With thousands of enrollees, [Skoolers](https://www.skoolerstutoring.com) is one of the largest independent tutoring companies serving University of Florida and Florida State University students. Not affiliated with either universities, they are a small group of tutors with over 10+ years of experience helping students master some of the must brutal courses students struggle through, including business finance, physics, math, and chemistry. They've made such a reputation for themselves that students seek out their review sessions, asking for them by name.
 
-## The Task
+# The task
 
-With a library of over 10,000 videos and students hungry to devour over 10 TB worth of video bandwidth a month, Skoolers needed a solution to deliver those videos in a streamlined, cost-efficient way.
+With a library of over 10,000 videos and students hungry to devour over 10 TB worth of video bandwidth a month, Skoolers needs a solution to deliver those videos in a streamlined, cost-efficient way. The tutors also need a online discussion forum for the students, along with sharing files and review schedules.
 
-## The Quick Solution
+# The solution
 
-Skoolers was limping along with an open-source [Moodle](https://moodle.org/) (PHP) based website that was pieced together just enough to function.
+After putting together the plan, I was able to produce a replacement solution based on [Meteor](https://www.meteor.com/), running on [Node.JS](https://nodejs.org/en/) servers with a [MongoDB](https://www.mongodb.com/) database and [React](https://facebook.github.io/react/) powering the front-end. [Vimeo](https://vimeo.com/) hosts all of the videos, and files are hosted by [AWS S3](https://aws.amazon.com/s3/).
 
-## The Good Solution
+# Development experience
 
-After putting together the plan, I was able to produce a replacement solution based on [Meteor](https://www.meteor.com/), running on Node.JS servers with a [MongoDB](https://www.mongodb.com/) database and [React](https://facebook.github.io/react/) powering the front-end.
+I've assembled some dev [details](/blog/skoolers-app-details) about the app along with my experiences in observing the app [scale from 0 to 1000+ users](/blog/scaling-with-meteor) and making [heavy use of the Vimeo API](/blog/writing-the-book-on-vimeo-api-rate-limiting).
 
-More fun tech stuff will come about how this was solved, but first, must finish tweaking the site for the client...
+In the process I've also released an open source [package](/blog/meteor-galaxy-autoscale) to help efficiently auto-scale Meteor Galaxy hosted apps, and made a number of [posts](/tags#skoolers) about various pitfalls and lessons learned while building the app.
