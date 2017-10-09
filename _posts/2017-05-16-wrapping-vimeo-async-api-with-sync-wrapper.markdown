@@ -19,10 +19,15 @@ After reading through all of the documentation for [Vimeo's API](https://github.
 I needed to ensure my DB stayed in sync with the Vimeo library, so that would involve a carefully planned run through the API to check all the online videos. The process would go something like this.
 
 1. Get the list of all albums (Vimeo has different types of 'collections' of videos, 'albums' is the type that we want).
+
 2. Because of the [API pagination](https://developer.vimeo.com/api/common-formats), we may have to call again to get the complete album list. We won't know until we receive the response of the first call.
+
 3. After we get the complete album list, for each album:
+
     1. Get the list of videos in that album.
+
     2. Again, because of pagination we may have to call multiple times to get all the videos in that album.
+
     3. Go through each video and update our DB with the updated information.
 
 Just thinking through the callbacks necessary to do all this properly gives me a mild headache. Keeping in mind that this functionality was core to the entire application, I needed to make sure this code was clean to read and maintain, could handle all the edge cases, and could be easily adjusted if/when the API changes.
