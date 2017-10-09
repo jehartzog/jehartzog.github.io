@@ -123,7 +123,7 @@ After oplog trailing, those figures dropped to **80 documents per second and 400
 
 I initially used [synced-cron](https://github.com/percolatestudio/meteor-synced-cron) to manage a number of maintenance scripts. After traffic picked up and my containers were pushed closer to their limits, the scripts would sometimes bump up memory usage of a container enough to kill itself.
 
-Rather than run these scripts on client facing servers, I shifted this to a cheap AWS EC2 server, deployed using MUP, and disabled synced-cron on the client facing servers. This led to extremely smooth CPU and memory graphs, allowing me to run closer to the limits without getting occasional memory kills or CPU pegs.
+Rather than run these scripts on client facing servers, I shifted this to a cheap AWS EC2 server, deployed using [MUP](https://www.npmjs.com/package/mup), and disabled synced-cron on the client facing servers. This led to extremely smooth CPU and memory graphs, allowing me to run closer to the limits without getting occasional memory kills or CPU pegs.
 
 # Final thoughts
 
