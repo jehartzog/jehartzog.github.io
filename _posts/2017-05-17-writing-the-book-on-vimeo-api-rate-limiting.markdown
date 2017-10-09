@@ -15,6 +15,7 @@ When creating the video solution for [Skoolers](/projects/skoolers), I needed to
 Obviously I needed to take a detailed look at the Vimeo API guidelines on rate limiting, and I was discouraged to find they were [empty of most useful information](https://developer.vimeo.com/guidelines/rate-limiting). Things I expected to see there but didn't:
 
 * How many calls can I make in a unit of time?
+
 * Is there a minimum amount of time between calls?
 
 Turns out the only way to find these answers was to start making calls against library and find out what happened. I ended up finding out a number answers to those questions by trial + error.
