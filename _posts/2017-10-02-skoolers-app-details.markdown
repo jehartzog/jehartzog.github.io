@@ -8,7 +8,7 @@ tag:
 - Skoolers
 category: blog
 image: /images/skoolers-logo-200x200.png
-description: "A breakdown of generic "
+description: "A breakdown of Meteor features used in the Skoolers app."
 ---
 This is a portion of my [Scaling with Meteor](/blog/scaling-with-meteor) post broken out for readability. 
 

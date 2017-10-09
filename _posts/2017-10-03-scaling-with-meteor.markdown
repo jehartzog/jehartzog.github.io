@@ -8,7 +8,7 @@ tag:
 - Skoolers
 category: blog
 image: /images/meteor-logo.png
-description: "A great mystery that shouldn't be"
+description: "From 0 to 1000 users, and everything in-between."
 ---
 After months monitoring and tuning my Meteor app for [Skoolers Tutoring](/projects/skoolers), I've finally hit peak traffic expected for the app at over 1000 daily active users (DAL). Since there is a limited number of students enrolled at any one time, I can plan on being prepared for this level of traffic, and any expansion plans will probably come with sub-domains running complete independent versions of the app.
 
