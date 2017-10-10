@@ -6,6 +6,7 @@ tag:
 - Meteor
 - NodeJS
 - Skoolers
+- MongoDB
 category: blog
 image: /images/meteor-logo.png
 description: "From 0 to 1000 users, and everything in-between."
