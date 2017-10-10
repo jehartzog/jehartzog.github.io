@@ -31,7 +31,7 @@ Rather than immediately blocking requests to those sites, the GFW instead silent
 
 1. Since it blocks any and all requests going to a wide range of IP addresses, a lot of sites and services that are otherwise not blocked will silently fail if the rely on any services provided by a blocked company.
 
-   You may have no idea how many websites rely on code provided by [Google CDN](https://developers.google.com/speed/libraries/) until that CDN is blocked and the site loads without any CSS or Javascript that it expects. Roughly [22% of websites](https://www.quora.com/How-many-apps-and-websites-in-aggregate-use-Facebook-Connect) use Facebook Connect for user login, which will silently fail behind the GFW.
+   You may have no idea how many websites rely on code provided by [Google CDN](https://developers.google.com/speed/libraries/) until that CDN is blocked and the site loads without any CSS or Javascript that it expects. About [250 million people](http://mashable.com/2010/12/08/facebook-connect-stats/#5.ykkkCX.kqk) (as of 2012) use Facebook Connect for user login, which will silently fail behind the GFW.
 
 2. When you are trying to use a service that is either directly or indirectly blocked, it doesn't fail gracefully. Instead of receiving a failed request, portions of the service or application may load while waiting for a response that will never come. Trying to use these services ends up being a frustrating battle of figuring out what portions of an application will work.
 
