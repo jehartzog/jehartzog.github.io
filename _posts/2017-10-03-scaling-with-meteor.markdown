@@ -11,9 +11,9 @@ category: blog
 image: /images/meteor-logo.png
 description: "From 0 to 1000 users, and everything in-between."
 ---
-After months monitoring and tuning my Meteor app for [Skoolers Tutoring](/projects/skoolers), I've finally hit peak traffic expected for the app at over 1000 daily active users (DAL). Since there is a limited number of students enrolled at any one time, I can plan on being prepared for this level of traffic, and any expansion plans will probably come with sub-domains running complete independent versions of the app.
+After months monitoring and tuning my Meteor app for [Skoolers Tutoring](/projects/skoolers), I've finally hit peak traffic expected for the app at over 1000 daily active users (DAL). Since there is a limited number of students enrolled at any one time, I can plan on being prepared for this level of traffic, and any expansion plans will probably come with sub-domains running completely independent versions of the app.
 
-With the countless forum posts online asking '[how does Meteor scale?](https://forums.meteor.com/t/how-many-simultaneous-users-does-the-biggest-current-meteor-app-support/10421/7)', I thought I share the results I saw in a real-world app.
+With the countless forum posts online asking [how does Meteor scale?](https://forums.meteor.com/t/how-many-simultaneous-users-does-the-biggest-current-meteor-app-support/10421/7), I thought I share the results I saw in a real-world app.
 
 # App background
 
