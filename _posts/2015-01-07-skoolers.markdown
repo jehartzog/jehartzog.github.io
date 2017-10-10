@@ -15,7 +15,7 @@ tag:
 image: /images/skoolers-logo-200x200.png
 category: projects
 hidden: true # don't show this in pagination
-description: "Skoolers Tutoring helps thousands of UF and FSU students dominate their courses with focused online video reviews, study materials, and practice questions."
+description: "Skoolers Tutoring helps thousands of UF and FSU students dominate their courses with focused online video reviews, study materials, and practice questions"
 extra-description: "I built and support the <a href=\"/projects/skoolers\">Skoolers</a> online platform."
 ---
 # About Skoolers
