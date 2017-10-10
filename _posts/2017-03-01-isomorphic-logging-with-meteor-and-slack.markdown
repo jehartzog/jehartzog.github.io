@@ -7,6 +7,7 @@ tag:
 - Winston
 - Logging
 - Skoolers
+- MongoDB
 category: blog
 image: /images/meteor-logo.png
 description: "Using Meteor seamlessly log and alert in Slack from both client & server"
@@ -32,6 +33,8 @@ I added a few NPM packages and then created the server handler to pass log event
 import winston from 'winston';
 import 'winston-mongodb';
 import { Slack } from 'slack-winston';
+import { Roles } from 'meteor/alanning:roles';
+import UserAgent from 'useragent';
 
 let transports = [
   // API details here https://github.com/niftylettuce/slack-winston#usage
@@ -61,9 +64,38 @@ let transports = [
   }),
 ];
 
+// We use a re-writer here to attach more detailed user information for all logs events, if available
+const addUserInfo = (level, msg, meta) => {
+  const newMeta = { ...meta };
+
+  try {
+    // If we are inside a pub/method/client code where Meteor.user() works and have a profile, log the info
+    const user = Meteor.user();
+    if (user && user.profile) {
+      newMeta.userInfo = {
+        name: user.profile.name,
+        id: user._id,
+        role: Roles.getRolesForUser(user._id),
+      };
+
+      // If we don't already have connection info but have user status using 'mizzao/meteor-user-status', use that info
+      if (newMeta.ip == null && user.status && user.status.lastLogin) {
+        newMeta.ip = user.status.lastLogin.ipAddr;
+        newMeta.userAgent = UserAgent.parse(user.status.lastLogin.userAgent).toString();
+      }
+    }
+  } catch (e) {
+    // Do nothing, Meteor will throw an error cause we tried to call Meteor.user() outside of a method or pub
+    // on server.
+  }
+
+  return newMeta;
+};
+
 // We are declaring 'logger' as a global variable to the entire server application
 logger = new winston.Logger({
   transports,
+  rewriters: [addUserInfo],
   exitOnError: false,
 });
 ```
@@ -75,7 +107,9 @@ We now have a server wide `logger` object that we can pass events at will, but t
 A few examples of where this is useful:
 
 * 404 errors -  The router forwards to the error component but the error never touches the server.
+
 * Logging user activity - Not shown in this post, I created a separate object called `activityLogger` that works exactly the same, but keeps a record of actions/edits to the site.
+
 * Payment integrations - I integrated with [Braintree](https://github.com/braintree/braintree-web-drop-in) web drop-in, which has the client request payment authorization and then forward that on to your server. You want to be alerted of any errors in the client-side process.
 
 ## Setup client forwarding of log events with Meteor methods
@@ -89,8 +123,11 @@ I ended up creating a simple Meteor method to receive incoming log information a
 import { ValidatedMethod } from 'meteor/mdg:validated-method';
 import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 
-const addDevLogEntry = new ValidatedMethod({
-  name: 'logs.addDevLogEntry',
+// This may cause UserAgent to be included in main bundle, but it shown this way for readability
+import UserAgent from 'useragent'; 
+
+const addLogEntry = new ValidatedMethod({
+  name: 'logs.addLogEntry',
   validate: new SimpleSchema({
     level: { type: String },
     message: { type: String },
@@ -102,17 +139,16 @@ const addDevLogEntry = new ValidatedMethod({
       return;
     }
 
-    // If this is called from a logged in user, let's go ahead and record his info
-    let user = {};
-    if (Meteor.user() && Meteor.user().profile) {
-      user = {
-        id: Meteor.userId(),
-        name: Meteor.user().profile.name,
-        status: Meteor.user().status,
-      };
-    }
+    // This is running in a method, so we have connection information we can attach to the log event
+    const ip = this.connection.clientAddress;
 
-    logger.log(level, message, { user, meta }));
+    const rawUserAgent = this.connection.httpHeaders['user-agent'];
+    const userAgent = UserAgent.parse(rawUserAgent).toString();
+
+    // We don't want to delay processing other methods while this gets logged with all transports
+    Meteor.defer(() => {
+      logger.log(level, message, { ...meta, ip, userAgent });
+    });
   },
 });
 ```
@@ -123,10 +159,10 @@ I also do some filtering of log events below, only sending them to the server if
 
 `/client/logger.js`
 ```js
-import { addDevLogEntry } from '/imports/api/logs/methods';
+import { addLogEntry } from '/imports/api/logs/methods';
 
-const sendDevLogToServer = (level, message, meta) => {
-  addDevLogEntry.call({
+const sendLogToServer = (level, message, meta) => {
+  addLogEntry.call({
     level,
     message,
     meta,
@@ -142,9 +178,9 @@ logger = {
   silly: () => { },
   debug: () => { },
   verbose: () => { },
-  info: (...args) => sendDevLogToServer('info', ...args),
-  warn: (...args) => sendDevLogToServer('warn', ...args),
-  error: (...args) => sendDevLogToServer('error', ...args),
+  info: (message, meta) => sendLogToServer({ level: 'info', message, meta }),
+  warn: (message, meta) => sendLogToServer({ level: 'warn', message, meta }),
+  error: (message, meta) => sendLogToServer({ level: 'error', message, meta }),
 };
 ```
 
