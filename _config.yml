@@ -16,7 +16,7 @@ bio: Freelance Dev
 picture: /images/profile.jpg
 
 # animations?
-animate: true
+animate: false
 
 # your default link style
 permalink: /:categories/:title
