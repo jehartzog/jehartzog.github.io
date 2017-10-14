@@ -51,15 +51,15 @@ The easiest way to evaluate the effectiveness of this is to add the indexes, obs
 
 ![skoolers indexes good](/images/skoolers-indexes-good.png "Skoolers MongoDB Indexes Good")
 
-## Performance boost #2 - Oplog Trailing
+## Performance boost #2 - Oplog Tailing
 
-After first setting up my production/staging environments and doing some limited tested, I tested enabling [oplog trailing](https://blog.meteor.com/tuning-meteor-mongo-livedata-for-scalability-13fe9deb8908) and saw that it led to noticeably higher idle CPU usage. This was before I had done any significant optimization work, and I'm not sure why I saw these results, but either way I decided at that time to disable oplog trailing.
+After first setting up my production/staging environments and doing some limited tested, I tested enabling [oplog tailing](https://blog.meteor.com/tuning-meteor-mongo-livedata-for-scalability-13fe9deb8908) and saw that it led to noticeably higher idle CPU usage. This was before I had done any significant optimization work, and I'm not sure why I saw these results, but either way I decided at that time to disable oplog tailing.
 
-This turned out to be the wrong choice, as I saw when I later re-enabled oplog trailing much later. The good part about this test it I was able to collect some real data on exactly how much better Meteor performs with oplog trailing enabled.
+This turned out to be the wrong choice, as I saw when I later re-enabled oplog tailing much later. The good part about this test it I was able to collect some real data on exactly how much better Meteor performs with oplog tailing enabled.
 
-### Before oplog trailing
+### Before oplog tailing
 
-![skoolers-peak-pre-oplog](/images/skoolers-peak-pre-oplog.png "Skoolers Peak Log Pre-Oplog Trailing")
+![skoolers-peak-pre-oplog](/images/skoolers-peak-pre-oplog.png "Skoolers Peak Log Pre-Oplog Tailing")
 Note about CPU usage graph: the % doesn't take into account container size. With compact size, the CPU maxes out at 15%.
 
 Raw stats:
@@ -75,17 +75,17 @@ Since I always wanted to have excess resources available, I can look at the numb
 
 ---
 
-Pre oplog trailing resources required **for every 100 unique users**:
+Pre oplog tailing resources required **for every 100 unique users**:
 - **1.5 ECU**
 - **1.5 GB of memory**
 
 ---
 
-### After oplog trailing
+### After oplog tailing
 
 These were taken the day after the above data set, with no other major changes made the app or database. Luckily user traffic was almost identical, allowing for a great comparison.
 
-![skoolers-peak-post-oplog](/images/skoolers-peak-post-oplog.png "Skoolers Peak Log Post-Oplog Trailing")
+![skoolers-peak-post-oplog](/images/skoolers-peak-post-oplog.png "Skoolers Peak Log Post-Oplog Tailing")
 
 Numbers:
 
@@ -102,7 +102,7 @@ Looking at the steady state load, I adjust the margins I'm comfortable with and 
 
 ---
 
-Post oplog trailing resources required **for every 100 unique users**:
+Post oplog tailing resources required **for every 100 unique users**:
 - **0.5 ECU**
 - **512 MB of memory**
 
@@ -112,13 +112,13 @@ I'm going closer to the memory limit here, but in general memory usage is very s
 
 ### Effects on MongoDB
 
-While my database provider never slowed down my app, it was clear that the pre oplog trailing was putting an enormous, and unnecessary, burden on the database. Looking at a few of the MongoDB graphs covering the same period before/after the transition to oplog trailing, you can see the dramatic difference in the amount of documents requested by Meteor.
+While my database provider never slowed down my app, it was clear that the pre oplog tailing was putting an enormous, and unnecessary, burden on the database. Looking at a few of the MongoDB graphs covering the same period before/after the transition to oplog tailing, you can see the dramatic difference in the amount of documents requested by Meteor.
 
-![skoolers-db-oplog](/images/skoolers-db-oplog.png "Skoolers MongoDB Scan Before/After Oplog Trailing")
+![skoolers-db-oplog](/images/skoolers-db-oplog.png "Skoolers MongoDB Scan Before/After Oplog Tailing")
 
-Before oplog trailing was enabled, my cluster of Meteor containers were requesting and processing **1000 documents per second and 18 Mbps of data** from my MongoDB cluster to support only 200 unique users.
+Before oplog tailing was enabled, my cluster of Meteor containers were requesting and processing **1000 documents per second and 18 Mbps of data** from my MongoDB cluster to support only 200 unique users.
 
-After oplog trailing, those figures dropped to **80 documents per second and 400 Kbps** of outbound data. That's a lot less unnecessary work processing all that duplicate data
+After oplog tailing, those figures dropped to **80 documents per second and 400 Kbps** of outbound data. That's a lot less unnecessary work processing all that duplicate data
 
 ## Performance Boost #3 - Offload cron jobs
 
