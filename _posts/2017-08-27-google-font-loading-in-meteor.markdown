@@ -38,7 +38,7 @@ After reading through [google's tips](https://developers.google.com/web/fundamen
 
 After we run `npm install -E webfontloader`, go ahead and tell the client to use it when it loads up. Notice I don't put this in a `Meteor.startup()` call, as I want it to be processed right away, not when the DOM is ready.
 
-`/imports/client/load-fonts.js'
+`/imports/client/load-fonts.js`
 ```js
 import WebFont from 'webfontloader';
 
