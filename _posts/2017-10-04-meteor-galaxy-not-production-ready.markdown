@@ -1,7 +1,7 @@
 ---
 title: "Meteor Galaxy is not Production Ready"
 layout: post
-date: 2017-10-02 17:00
+date: 2017-10-04 17:00
 tag:
 - Meteor
 - Galaxy
