@@ -12,7 +12,7 @@ image: /images/meteor-logo.png
 description: "The verdict is clear, AWS absolutely dominates and at a lower price."
 ---
 
-After 6 months of hosting on Galaxy with multiple [host caused outages](/blog/meteor-galaxy-not-production-ready), I was willing to put in the effort of transitioning to AWS. Nothing is more stressful than a DevOps provider than to have his apps drop offline for no good reason, and not have any alerts to warn of issues before Pingdom tells you that your website is timing out.
+After 6 months of hosting on Galaxy with multiple [host caused outages](/blog/meteor-galaxy-not-production-ready), I was willing to put in the effort of transitioning to AWS. Nothing is more stressful for a DevOps provider than to have his apps drop offline for no good reason, and not have any alerts to warn of issues before Pingdom tells you that your website is timing out.
 
 ## Time for a change
 
@@ -100,7 +100,7 @@ module.exports = {
 
 ### Meteor App Unique Naming
 
-Another task that Galaxy performed for me that I wasn't aware of is ensuring that my Meteor containers all had unique app names. I must have missed this in documentation somewhere, as when I first set up MUP with my two webservers, the apps were named in the MUP config like this:
+Another task that Galaxy performed for me that I wasn't aware of is ensuring that my Meteor containers all had unique app names. When I first set up MUP with my two webservers, the apps were both named in the MUP config like this:
 
 ```js
 module.exports = {
@@ -122,4 +122,4 @@ I've held off posting my negative experience with Galaxy for a long time, becaus
 
 I've offered detailed feedback to the Galaxy support team and given all I can to try to help them improve what they offer, but while always polite they have always seem uninterested in major improvements.
 
-While I've never spoken to anybody at AWS, it's because I've never needed to; their solutions just work, are incredible reliable, and if AWS goes down, so does most of the internet so your clients won't really blame you. For my future projects I'll definitely be biased towards using the stronger 'general-purpose' cloud providers (AWS, DO, GCP, Azure) rather than specialty providers who wrap up the service with their own opaque framework.
+While I've never spoken to anybody at AWS, it's because I've never needed to; their solutions just work, are incredibly reliable, and if AWS goes down, so does most of the internet so your clients won't really blame you. For my future projects I'll definitely be biased towards using the stronger 'general-purpose' cloud providers (AWS, DO, GCP, Azure) rather than specialty providers who wrap up the service with their own opaque framework.
