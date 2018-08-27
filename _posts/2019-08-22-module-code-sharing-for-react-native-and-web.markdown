@@ -54,7 +54,7 @@ There are a number of far more 'correct' ways to do this that simply didn't pan 
 
   * This can be done via private repository or using github to host the module. While this works better than local packages, they new issue that came up is the huge different in how the CRNA and CRA were set up to build. Basically React Native compiles everything with Babel, where Webpack in CRA excludes everything in node_modules. This will cause web build errors in all your modules, as Webpack will not be able to properly process anything ES6/JSX if Babel hasn't processed it yet.
 
-  * For our Web app, we hadn't yet ejected CRA and I had no desire to do so just so I can spend a ton of time tweaking Webpack config to make this work. Other people have [had success](https://pickering.org/using-react-native-react-native-web-and-react-navigation-in-a-single-project-cfd4bcca16d0) doing it this way, but tweaking config and 'Monkey Patching' individual modules seemed more work than it was worht.
+  * For our Web app, we hadn't yet ejected CRA and I had no desire to do so just so I can spend a ton of time tweaking Webpack config to make this work. Other people have [had success](https://pickering.org/using-react-native-react-native-web-and-react-navigation-in-a-single-project-cfd4bcca16d0) doing it this way, but tweaking config and 'Monkey Patching' individual modules seemed more work than it was worth.
 
 * ### Use `npm pack` + `npm install`
 
