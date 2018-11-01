@@ -10,6 +10,10 @@ category: blog
 description: "Quick and easy code sharing between React Native and React Web projects."
 ---
 
+**Edit (11/1/2018)**: After I finished this work, I found [wix/wml](https://github.com/wix/wml) which solves the file syncing issue with minimal pain. While the approach in this post is still generally applicable, I'd recommend starting with `wml` rather than using custom scripts to sync the module files.
+
+---
+
 When reading about various options for native app development, a huge pitch for using React Native (RN) is that you don't need to switch context & languages, just use what you already know from web apps and it will mostly work!
 
 While this is definitely true for almost all projects, if you're assembling a product with distinct but similar web and native releases, it's not just enough to be able work in the same general language, but you want to be able to share common code and functionality between your projects.
