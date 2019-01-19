@@ -1,7 +1,6 @@
 ---
 title: About
 layout: page
-description: "A man and his dog"
 ---
 
 <header class="header-about">
