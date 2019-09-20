@@ -10,7 +10,7 @@ resume-url: https://google.com/?q=my+resume
 # main text of home
 name: Eric Hartzog
 # header bio written directly into header.html to allow for extra tags for animation
-bio: Freelance Dev
+bio: Software Engineer @ MeetMindful
 
 # profile picture
 picture: /images/profile.jpg
