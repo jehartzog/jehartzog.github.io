@@ -13,16 +13,7 @@ description: "An action-packed iOS game, StickWars has more than 10 million play
 extra-description: "I created <a href=\"/projects/stickwars\">StickWars</a> while completing college and commissioning in the Navy."
 ---
 
-StickWars is a fast-paced, action-packed game that requires lightning-fast fingers and cunning strategy. You can find it now on the App Store:
-
-<div class="side-by-side text-center">
-	<div class="toleft">
-		<iframe src="//banners.itunes.apple.com/banner.html?partnerId=&aId=11l9ZB&bt=catalog&t=catalog_white&id=309527804&c=us&l=en-US&w=300&h=250&store=apps" frameborder="0" style="overflow-x:hidden;overflow-y:hidden;width:300px;height:250px;border:0px"></iframe>
-	</div>
-	<div class="toright">
-		<iframe src="//banners.itunes.apple.com/banner.html?partnerId=&aId=11l9ZB&bt=catalog&t=catalog_white&id=309528712&c=us&l=en-US&w=300&h=250&store=apps" frameborder="0" style="overflow-x:hidden;overflow-y:hidden;width:300px;height:250px;border:0px"></iframe>
-	</div>
-</div>
+StickWars is a fast-paced, action-packed game that requires lightning-fast fingers and cunning strategy. You can find [StickWars](https://apps.apple.com/us/app/stickwars/id309527804) and [StickWars Lite](https://apps.apple.com/us/app/stickwars-lite/id309528712) on the iOS App Store:
 
 # History
 
