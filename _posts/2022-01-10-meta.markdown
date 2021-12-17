@@ -1,0 +1,13 @@
+---
+title: "Meta"
+layout: post
+date: 2022-10-01 17:00
+tag:
+- Projects
+#image: /images/meta-logo.png
+category: projects
+hidden: true # don't show this in pagination
+description: "I've accepted a position as a Senior Software Engineer at Meta"
+extra-description: ""
+---
+TBD
